@@ -114,7 +114,7 @@ export default function About() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Where I Am Now</h3>
               <p className="text-[var(--text-light)] mb-6">
-                Currently, I work as a Frontend Developer at [Company Name], where I build 
+                Currently, I work as a Frontend Developer at FPT Software, where I build 
                 responsive web applications using modern technologies like React, Next.js, and 
                 Tailwind CSS. I've had the privilege of working on projects that impact thousands 
                 of users daily.

@@ -62,8 +62,7 @@ export default function Contact() {
           href="mailto:your-email@example.com"
           className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
         >
-          your-email@example.com
-        </a>
+nttngan0111@gmail.com        </a>
 
         <div className="mt-4">
           <Link

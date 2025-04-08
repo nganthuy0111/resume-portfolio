@@ -35,7 +35,7 @@ export default function Resume() {
       
       <div className="mb-8 text-center">
         <a 
-          href="/resume.pdf" 
+          href="/NguyenThiThuyNgan_CV.pdf" 
           download
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition inline-block"
         >
