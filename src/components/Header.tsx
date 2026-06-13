@@ -79,11 +79,6 @@ const Header = () => {
                   Resume
                 </Link>
               </li>
-              <li>
-                <Link href="/contact" className="nav-link">
-                  Contact
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>
@@ -126,15 +121,6 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Resume
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="block py-2 px-4 text-center rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
                 </Link>
               </li>
             </ul>

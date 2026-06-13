@@ -153,17 +153,7 @@ export default function Resume() {
         </main>
       </div>
 
-      <section className="text-center py-8">
-        <h2 className="text-2xl font-bold mb-4">
-          Interested in working together?
-        </h2>
-        <Link
-          href="/contact"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition inline-block"
-        >
-          Get In Touch
-        </Link>
-      </section>
+      {/* Contact call-to-action removed */}
     </div>
   );
 }

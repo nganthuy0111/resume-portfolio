@@ -23,12 +23,6 @@ export default function Home() {
               >
                 View Projects
               </Link>
-              <Link
-                href="/contact"
-                className="inline-block border border-amber-700 text-amber-700 hover:bg-amber-50 px-5 py-2 rounded-md font-medium"
-              >
-                Contact Me
-              </Link>
             </div>
 
             <div className="mt-4">
