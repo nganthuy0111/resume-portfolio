@@ -6,13 +6,24 @@ import { personalInfo } from "../data/resume";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const initials = personalInfo.name
+    .split(" ")
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md bg-opacity-80 dark:bg-opacity-80">
-      <div className="container mx-auto px-4 py-4">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-sm">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold gradient-text">
-            {personalInfo.name}
+          <Link href="/" className="flex items-center gap-3">
+            <span className="w-9 h-9 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 flex items-center justify-center text-white font-semibold">
+              {initials}
+            </span>
+            <span className="text-2xl font-bold gradient-text">
+              {personalInfo.name}
+            </span>
           </Link>
 
           {/* Mobile menu button */}
@@ -47,7 +58,7 @@ const Header = () => {
 
           {/* Desktop navigation */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-8">
+            <ul className="flex items-center space-x-4">
               <li>
                 <Link href="/" className="nav-link">
                   Home
