@@ -1,20 +1,34 @@
 import Link from "next/link";
-import { personalInfo, education, experience } from "../../data/resume";
+import {
+  personalInfo,
+  education,
+  experience,
+  languages,
+} from "../../data/resume";
 import skills from "../../data/skills";
 import projects from "../../data/project";
 
 export default function Resume() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container relative mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold mb-8 text-center">Resume</h1>
 
       <div className="mb-8 text-center">
+        {/* Desktop: absolute top-right; Mobile: fixed bottom-right */}
         <a
           href="/NguyenThiThuyNgan_CV.pdf"
           download
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition inline-block"
+          className="hidden md:inline-block absolute top-6 right-6 bg-amber-700 hover:bg-amber-800 text-white px-5 py-2 rounded-md transition shadow-lg"
         >
-          Download Resume PDF
+          Download Resume
+        </a>
+
+        <a
+          href="/NguyenThiThuyNgan_CV.pdf"
+          download
+          className="md:hidden fixed bottom-6 right-4 bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full transition shadow-lg"
+        >
+          Download
         </a>
       </div>
 
@@ -71,6 +85,32 @@ export default function Resume() {
           <div>
             <p className="font-semibold">Tools:</p>
             <p className="text-sm">{skills.tools.join(", ")}</p>
+          </div>
+
+          <div className="mt-6">
+            <h3 className="text-xl font-semibold mb-2">Languages</h3>
+            <ul className="text-sm space-y-3">
+              {languages.map((l) => (
+                <li key={l.name} className="">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">{l.flag}</span>
+                      <span className="font-medium">{l.name}</span>
+                    </div>
+                    <span className="text-sm text-gray-600 dark:text-gray-300">
+                      {l.level}
+                    </span>
+                  </div>
+
+                  <div className="mt-2 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div
+                      className="h-2 bg-amber-600 dark:bg-amber-500"
+                      style={{ width: `${l.percent}%` }}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </aside>
 

@@ -44,4 +44,9 @@ export const experience = [
   }
 ];
 
-export default { personalInfo, education, experience };
+export const languages = [
+  { name: "Tiếng Việt", level: "Bản ngữ", flag: "🇻🇳", percent: 100 },
+  { name: "English", level: "IELTS ~5.5", flag: "🇬🇧", percent: 55 }
+];
+
+export default { personalInfo, education, experience, languages };
