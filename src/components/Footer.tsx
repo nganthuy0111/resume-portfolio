@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -10,26 +10,18 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Thuy Ngan. All rights reserved.
             </p>
           </div>
-          
+
           <div className="flex space-x-4">
-            <a 
-              href="https://github.com/yourusername" 
-              target="_blank" 
+            <a
+              href="https://github.com/nganthuy0111"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
             >
               GitHub
             </a>
-            <a 
-              href="https://linkedin.com/in/yourusername" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
-            >
-              LinkedIn
-            </a>
-            <a 
-              href="mailto:your.email@example.com"
+            <a
+              href="mailto:nttngan0111@gmail.com"
               className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
             >
               Email

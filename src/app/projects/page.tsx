@@ -1,53 +1,59 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 // You can replace this with data from your data files
 const projectsData = [
   {
     id: 1,
-    title: "E-commerce Website",
-    description: "A full-featured e-commerce platform built with Next.js, Tailwind CSS, and a headless CMS. Includes user authentication, product catalog, shopping cart, and checkout functionality.",
-    image: "/images/flipmart.webp",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Stripe", "Sanity CMS"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project-1"
+    title: "Modern Ritual Offering Service Platform (Capstone Project)",
+    description:
+      "Developed an online platform for ritual offering services and ceremonial product management. Built backend services using ASP.NET Core and SQL Server. Implemented product approval workflows for administrative staff. Integrated Gemini AI for content moderation and AI-powered customer support chatbot.",
+    image: "/images/mam-cung-day-thang-be-gai-10.jpg",
+    technologies: [
+      "ASP.NET Core",
+      "SQL Server",
+      "Entity Framework Core",
+      "JWT Authentication",
+      "Gemini AI",
+    ],
+    demoUrl: "https://mamcung.shop",
+    githubUrl:
+      "https://github.com/nganthuy0111/SEP490_Modern_ritual_offering_platform_api",
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    description: "A responsive portfolio website built with Next.js and Tailwind CSS. Features a clean design, dark mode, and smooth animations.",
-    image: "/images/portfolio.png",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project-2"
+    title: "Second-hand EV & Battery Trading Platform",
+    description:
+      "Developed mobile application interfaces for trading used electric vehicles and batteries. Implemented transaction workflows and optimized user experience across mobile devices.",
+    image: "/images/ev-car.webp",
+    technologies: [
+      "React Native",
+      "Mobile UI",
+      "APIs",
+      "Transaction Workflows",
+    ],
+    demoUrl: "#",
+    githubUrl: "https://github.com/gwang08/Mobile_Evmarket",
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "A task management application with drag-and-drop functionality, user authentication, and real-time updates. Built with React, Firebase, and Tailwind CSS.",
-    image: "/images/task.webp",
-    technologies: ["React", "Firebase", "Tailwind CSS", "React DnD"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project-3"
+    title: "HIV Treatment and Medical Services System",
+    description:
+      "Developed frontend modules for patient check-in and medication dispensing workflows. Integrated APIs and implemented validation logic for healthcare operations.",
+    image: "/images/hiv.jpeg",
+    technologies: ["React", "Validation", "REST API"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/nganthuy0111/SDN302_MedicalTreatment",
   },
-  {
-    id: 4,
-    title: "Weather Dashboard",
-    description: "A weather dashboard that displays current weather and forecast information for any location. Uses the OpenWeather API and features a responsive design.",
-    image: "/weather.png",
-    technologies: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project-4"
-  }
 ];
 
 export default function Projects() {
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold mb-8 text-center">My Projects</h1>
-      
+
       <div className="grid md:grid-cols-2 gap-8">
         {projectsData.map((project) => (
-          <div 
+          <div
             key={project.id}
             id={`project-${project.id}`}
             className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
@@ -65,12 +71,14 @@ export default function Projects() {
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 {project.description}
               </p>
-              
+
               <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-2">Technologies Used:</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  Technologies Used:
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span 
+                    <span
                       key={tech}
                       className="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
                     >
@@ -79,9 +87,9 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="flex gap-4">
-                <a 
+                <a
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -89,7 +97,7 @@ export default function Projects() {
                 >
                   Live Demo
                 </a>
-                <a 
+                <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
